@@ -1,0 +1,79 @@
+int a
+(Thread is inconsistent )
+int b
+
+Writer.wait: If a writeer is writing
+
+Reader.wait: If a reader is holding the locks , more readers can get it
+
+Why do we not make all threads Reader threads : Performance reasons
+
+
+RW Map :
+
+RWM{
+    RWL m
+    Bucket {
+        RWL bm # bm protects the
+        Map<k,v> map
+    }
+    Array<bucket> array # m protects the array
+
+    RWL {
+        read_wait()
+        read_signal()
+        write_wait()
+        write_signal()
+    }
+
+
+val get(Key k):
+    m.read_wait()
+    Val v = map[k]
+    m.read_signal
+    return v
+    }
+
+
+put(key  k):
+
+
+put_scalable(key k,Val v)
+    int hash =hash(k)
+    m.read_wait()
+    int b = hash % array.size()
+    array[b].bm.write.wait()
+    array[b].map[k] = v
+    array[b].bm.write_signal()
+    m.read_signal
+
+write_wait()
+    resource.wait()
+
+write_signal()
+    resource.signal
+
+
+read_wait(){
+    m.wait()
+    ++readers
+    if (readers == 1)
+        resource.wait()
+    m.signal()
+}
+
+read_signal(){
+    m.wait()
+    --readers
+    if(reads == 0):
+        resource.signal()
+    m.signal()
+}
+
+Single Thread Assumption:
+
+foo()
+ m.wait()
+++ count
+m.signal()
+return(count)

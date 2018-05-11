@@ -1,0 +1,17 @@
+Fair-Scheduling
+Key takeaway :
+By definition if 1 thread is waiting
+
+Queue gives you a time -order
+
+make fair
+
+FairMutex {
+    Queue q <sem>
+    Mutex m
+}
+
+wait(){
+    semaphore sem
+    m.wait()
+    if q

@@ -1,0 +1,7 @@
+Facebook:
+
+1) Given K sorted arrays of size N each, merge them and print the sorted output.Assume N is very large compared to K. N may not even be known .
+The arrays could be just sorted streams , for instance, timestamp streams .
+
+2) Find K largest elements from a given stream of numbers. By definition , we don't know the size of the input stream .Hence produce K largest elements
+seen so far at an given time .

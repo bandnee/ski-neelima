@@ -1,0 +1,13 @@
+Happens before
+Happens after
+Compiler optimization:
+Hoisting
+volatile ?
+Decorators
+Re-entrant lock
+Any foreign method invocation should be outside of critical section
+
+1) Practice immutability
+2) narrow the scope of critical section
+3) choice of Lock
+

@@ -1,0 +1,47 @@
+class Node:
+    def __init__(self, val):
+        self.val = val
+        self.left = None
+        self.right = None
+
+
+def constructBST(l1,start,end):
+    if start > end :
+        return None
+    else:
+        mid = int((start + end)/2)
+        root = Node(l1[mid])
+        root.left =  constructBST(l1,start,mid-1)
+        root.right = constructBST(l1,mid+1,end)
+        return root
+
+def po_traversal(bst):
+    #Maintain 2 stacks
+    # one stack maintains the nodes that are not processed
+    # 2nd one maintains the nodes that are processed.
+    s1 = []
+    s2 = []
+    if(bst!=None ):
+        s1.append(bst)
+    else:
+        print("empty tree")
+        return
+    while s1 :
+        cur_node = s1.pop()
+        s2.append(cur_node.val)
+        if cur_node.left :
+            s1.append(cur_node.left)
+        if cur_node.right :
+            s1.append(cur_node.right)
+    print (s2[::-1])
+
+
+
+
+
+
+
+l1 = [1,2,3,4,5,6,7]
+
+bst = constructBST(l1,0, len(l1)-1)
+po_traversal(bst)

@@ -1,0 +1,13 @@
+IPM - InProcess of Mutex {
+    Sem  sem(0)
+    int count = 0
+}
+
+wait()
+    int val = AtomicInc(count)
+    if (val != 0)
+        sem.wait()
+    signal()
+    int val = AtomicDec(&count)
+
+

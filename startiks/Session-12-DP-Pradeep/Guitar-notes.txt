@@ -1,0 +1,28 @@
+Notes = [1,2,3,1, ..... ]
+Fingers[1...F]
+difficulty(p,f,q,g) : p, q are notes | f,g are fingers
+
+Least transition Cost of finger assignment
+
+Number of ways notes can be played : O(F^N * N)
+
+F[i] = Lowest cost of playing notes[i:]
+
+F[i]
+
+T(i,j) = Lowest cost of playing notes[i+1:],
+assuming Notes[i] was played with finger f
+
+T(i,j)  =  min( T(i+1,g) + difficulty(i,f,i+1,g) ) For all g[1 .. F]
+
+#Base Case
+for all fingers
+    T[len(notes)-1][1..F] = 0
+
+for finger in range(1 , F+1):
+    for i in range(len(notes)-2,-1,-1):
+        T[i][finger] sys.maxint
+        for g in range(1,F+1):
+            T[i][Finger] = Mathmin
+
+

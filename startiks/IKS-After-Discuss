@@ -1,0 +1,18 @@
+Stacks/LL/Queues:
+ LL:
+  Cycle Detection
+  Merge Sort of LL, what is the special case
+  Remove the nth element from the end of the linked list
+
+ Stacks :
+ Paran_stack
+ Design and implement LRU (Hashmap/Dict : Doubly-linked-list)
+ Longest Substring with balanced Paranthesis: Find_max_length_of_matching_paranthesis
+ ))((((()))
+ ()()()()
+ super stack
+
+
+ Implement:
+
+ alternate_node_split

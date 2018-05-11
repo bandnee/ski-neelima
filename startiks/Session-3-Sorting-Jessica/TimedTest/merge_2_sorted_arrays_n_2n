@@ -1,0 +1,20 @@
+# Complete the function below.
+
+# Start  from the  end , find the largest element and
+# add it to the end of the second list .
+
+def merger_first_into_second(arr1, arr2):
+    i = 0
+    j = 0
+    nj = len(arr1)
+    while j < len(arr2):
+        if arr1[i] < arr2[j]:
+            # swap the j element with  nj
+            arr2[j],arr2[nj] =arr2[nj],arr2[j]
+            arr2[j] = arr1[i]
+            i = i +1
+            j =  nj
+            sorted =
+        elif arr2[j] < arr1[i]:
+            arr2[j], arr2[nj] = arr2[nj], arr2[j]
+

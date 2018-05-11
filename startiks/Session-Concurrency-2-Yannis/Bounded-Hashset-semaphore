@@ -1,0 +1,18 @@
+BHS {
+
+    Hashset h
+    mutex m
+    semaphore sem(ms)
+}
+
+void add(key )
+{
+    sem.wait()   # semaphore maintains the opposite bound  , if there are 0 elements , there will be 
+                 # bound elements in the count  
+    m.wait()
+    if (! h.add(k)):   # if a key already exists, you need to signal the semaphore
+        sem.signal()
+    
+    m.signal() 
+
+}

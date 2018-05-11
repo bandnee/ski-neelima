@@ -1,0 +1,45 @@
+'''Bounded Producer Consumer Queue:
+Pulse:
+
+'''
+
+PCQ {
+
+   T data[Ms]
+   int getidx
+   int putidx
+   int count
+
+   Mutex m
+   cv not Empty
+   cv notFull
+}
+
+
+void produce(T Q){
+    m.wait()
+    while(count == ms)
+        notFull.wait()
+
+     #Condition Variable, the 3 logical steps
+     #mutex is also 
+
+    data[putidx] = Q #add in queue
+    putidx = (putidx +1 ) %ms
+    ++count;
+    notEmpty.signal()
+    m.signal()
+}
+
+T* consume() {
+    m.wait()
+    while(count == 0) :
+        notEmpty.wait()
+    T*d = data[setidx]
+    getidx  = (getidx + 1) %ms
+    --count
+    notFull.signal()
+    m.signal()
+    return 
+    
+}

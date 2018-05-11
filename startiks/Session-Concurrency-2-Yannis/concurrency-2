@@ -1,0 +1,12 @@
+Mutex: In-process mutex  is fast relative to cross-process
+
+Condition Variables :
+* Is always associated with mutex.
+I want to run what ,
+*** Always use 'while'  for condition varaibles
+
+(Grand Daddy) Semaphores:
+
+Atomic Operations: Hardware supported
+
+

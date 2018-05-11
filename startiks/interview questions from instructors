@@ -1,0 +1,37 @@
+Question1:
+
+A sorted , no duplicates
+
+B sorted, no duplicates
+
+Find all duplicate elements in both A ans B
+
+def findAll(A, B) :
+
+    left_len = len(A)
+    right_len  = len (B)
+    i = 0
+    j = 0
+    final = []
+    while (i < left_len and j <  right_len):
+        if(A[i] == B[j]:
+            final.append(A[i]
+            i++
+        else:
+            final.append(B[j]
+            j++
+
+If one array is smaller
+
+an the second array is larger
+
+Binary search , time complexity is O(AlogB)
+
+
+Stability : ORder of duplicates is preserved .
+
+Question2: Optimal height matching algorithm
+
+A = [10,12,3,1,8]
+B = [4,7,13,2,9]
+
